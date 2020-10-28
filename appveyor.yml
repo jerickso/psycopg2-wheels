@@ -22,6 +22,16 @@ environment:
         # https://www.appveyor.com/docs/build-environment/
       - {PY_VER: "39", PY_ARCH: "32"}
       - {PY_VER: "39", PY_ARCH: "64"}
+      - {PY_VER: "38", PY_ARCH: "32"}
+      - {PY_VER: "38", PY_ARCH: "64"}
+      - {PY_VER: "37", PY_ARCH: "32"}
+      - {PY_VER: "37", PY_ARCH: "64"}
+      - {PY_VER: "36", PY_ARCH: "32"}
+      - {PY_VER: "36", PY_ARCH: "64"}
+      - {PY_VER: "35", PY_ARCH: "32"}
+      - {PY_VER: "35", PY_ARCH: "64"}
+      - {PY_VER: "34", PY_ARCH: "32"}
+      - {PY_VER: "34", PY_ARCH: "64"}
 
     OPENSSL_VERSION: "1_1_1h"
     POSTGRES_VERSION: "11_4"
@@ -86,9 +96,6 @@ test_script:
 
 on_success:
     - "%PYEXE% psycopg2\\scripts\\appveyor.py on_success"
-
-on_finish:
-    - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 # Cache is saved after ending of on_success
 
