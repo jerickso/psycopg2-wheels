@@ -7,9 +7,6 @@ configuration:
   - psycopg2
   - psycopg2-binary
 
-image:
-    - Visual Studio 2019
-
 environment:
 
     global:
@@ -20,18 +17,18 @@ environment:
     matrix:
         # For Python versions available on Appveyor, see
         # https://www.appveyor.com/docs/build-environment/
-      - {PY_VER: "39", PY_ARCH: "32"}
-      - {PY_VER: "39", PY_ARCH: "64"}
-      - {PY_VER: "38", PY_ARCH: "32"}
-      - {PY_VER: "38", PY_ARCH: "64"}
-      - {PY_VER: "37", PY_ARCH: "32"}
-      - {PY_VER: "37", PY_ARCH: "64"}
-      - {PY_VER: "36", PY_ARCH: "32"}
-      - {PY_VER: "36", PY_ARCH: "64"}
-      - {PY_VER: "35", PY_ARCH: "32"}
-      - {PY_VER: "35", PY_ARCH: "64"}
-      - {PY_VER: "34", PY_ARCH: "32"}
-      - {PY_VER: "34", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019, PY_VER: "39", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019, PY_VER: "39", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "38", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "38", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "37", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "37", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "36", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "36", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "35", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "35", PY_ARCH: "64"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "34", PY_ARCH: "32"}
+        - {APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015, PY_VER: "34", PY_ARCH: "64"}
 
     OPENSSL_VERSION: "1_1_1h"
     POSTGRES_VERSION: "13_0"
