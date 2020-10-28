@@ -8,6 +8,7 @@ configuration:
   - psycopg2-binary
 
 image:
+    - Visual Studio 2015
     - Visual Studio 2019
 
 environment:
@@ -45,7 +46,7 @@ environment:
     PGSSLMODE: require
 
     # Add CWD to perl library path for postgresql build
-#    PERL5LIB: .
+    PERL5LIB: .
 
     # Select according to the service enabled
     POSTGRES_DIR: C:\Program Files\PostgreSQL\9.6\
