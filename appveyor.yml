@@ -34,7 +34,7 @@ environment:
       - {PY_VER: "34", PY_ARCH: "64"}
 
     OPENSSL_VERSION: "1_1_1h"
-    POSTGRES_VERSION: "11_4"
+    POSTGRES_VERSION: "13_0"
 
     PSYCOPG2_TESTDB: psycopg2_test
     PSYCOPG2_TESTDB_USER: postgres
@@ -45,7 +45,7 @@ environment:
     PGSSLMODE: require
 
     # Add CWD to perl library path for postgresql build
-    PERL5LIB: .
+#    PERL5LIB: .
 
     # Select according to the service enabled
     POSTGRES_DIR: C:\Program Files\PostgreSQL\9.6\
